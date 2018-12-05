@@ -6,7 +6,7 @@ $stagnantusers = @()
 
 $currentUTC = [DateTime]::Now.Subtract([TimeSpan]::FromDays(91)).ToFileTime()
 
-    $userlist = get-aduser -Filter * -properties * | where {($_.Enabled -eq "True") -and ($_.EmployeeNumber -ne $null) -and ($_.lastLogonTimeStamp -ne $null)} | `
+    $userlist = get-aduser -Filter * -properties * | where {($_.Enabled -eq "True") -and ($_.lastLogonTimeStamp -ne $null)} | `
     select Name,SamAccountName,Description,DistinguishedName,Manager
     foreach ($value in $userlist)
     {

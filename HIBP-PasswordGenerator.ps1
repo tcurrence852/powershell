@@ -10,12 +10,12 @@
 #Checks HaveIBeenPwned with SHA1 first 5 chars for hash match subset, then checks full hash locally against that subset for exact match
 #Auto adds new password to clipboard and then clears clipboard after 30 seconds, dumps all remnants of passwords/hashes from memory
 <#
-    Check-HaveIBeenPwned -HashType "SHA1", "SHA256", "SHA384", "SHA512", "MACTripleDES", "MD5", "RIPEMD160" -Generate
+    Check-HaveIBeenPwned -HashType "SHA1" -Generate
 #>
 
 #Check your own passwords against HIBP with SHA1 first 5 chars for hash match subset, then checks full hash locally against that subset for exact match, dumps all remnants of passwords/hashes from memory
 <#
-    Check-HaveIBeenPwned -HashType "SHA1", "SHA256", "SHA384", "SHA512", "MACTripleDES", "MD5", "RIPEMD160" -Check
+    Check-HaveIBeenPwned -HashType "SHA1" -Check
 #>
 
 Function New-Password  {

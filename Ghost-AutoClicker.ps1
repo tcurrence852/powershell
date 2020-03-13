@@ -31,7 +31,7 @@ public static void RightClick(){
 
 Add-Type -MemberDefinition $DebugViewWindow_TypeDef -Namespace AutoClicker -Name Temp -ReferencedAssemblies System.Drawing
 
-#Add-Type -AssemblyName System.Windows.Forms
+Add-Type -AssemblyName System.Windows.Forms
  
 $pt = New-Object System.Drawing.Point
 
